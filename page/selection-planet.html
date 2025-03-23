@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Exploring | Space Y</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://unpkg.com/splitting@1.0.6/dist/splitting.css'>
+    <link rel="stylesheet" href="../css/selection-planet.css">
+    <link rel="icon" type="image/jpg" href="../media/rocket-logo-square.ico">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div id="left-logo-container">
+            <a href="../index.html"><h1 class="brand">Space Y</h1></a>
+        </div>
+        <nav id="link-nav-container">
+            <a href="../index.html">HOME</a>
+            <a href="#">LAUNCHES</a>
+            <a href="#">MISSIONS</a>
+            <a href="#">UPDATES</a>
+            <a href="#">CONTACT</a>
+        </nav>
+        <div id="account-container">
+            <a href="../page/error-404.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <div id="app" data-current-planet="mercury">
+
+        <nav class="planet-nav">
+        <svg viewBox="-50 10 550 450" xmlns="http://www.w3.org/2000/svg">
+
+
+            <!--       <defs> -->
+            <path
+                    id="navPath"
+                    d="M20,220 C10,-50 450,-50 470,240"
+                    fill="none" />
+            <!--       </defs> -->
+
+            <text>
+                <textPath href="#navPath" startOffset="0" font-size="10">
+                    <tspan>Mercury</tspan>
+                    <tspan>Venus</tspan>
+                    <tspan>Earth</tspan>
+                    <tspan>Mars</tspan>
+                    <tspan>Jupiter</tspan>
+                    <tspan>Saturn</tspan>
+                    <tspan>Uranus</tspan>
+                    <tspan>Neptune</tspan>
+                </textPath>
+            </text>
+
+        </svg>
+    </nav>
+
+    <div class="planet" data-planet="mercury" data-active>
+        <div class="planet-title">
+            <h2>Mercury</h2>
+            <p class="planet-description">Tiny and close to the sun.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                0.034
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                3.7
+            </div>
+            <div class="detail" data-detail="hours">
+                1408
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/1_mercury.jpg" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="venus">
+        <div class="planet-title">
+            <h2>Venus</h2>
+            <p class="planet-description">A planet of razors and tennis players.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                177.36
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                8.87
+            </div>
+            <div class="detail" data-detail="hours">
+                5832
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/2_venus.jpg" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="earth">
+        <div class="planet-title">
+            <h2>Earth</h2>
+            <p class="planet-description">Voted best planet in the Solar System by all organisms.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                23.44
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                9.81
+            </div>
+            <div class="detail" data-detail="hours">
+                24
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/3_earth.jpg" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="mars">
+        <div class="planet-title">
+            <h2>Mars</h2>
+            <p class="planet-description">Future Site of Elon Musk's AirBnB.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                25.19
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                3.71
+            </div>
+            <div class="detail" data-detail="hours">
+                24.6
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/4_mars.png" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="jupiter">
+        <div class="planet-title">
+            <h2>Jupiter</h2>
+            <p class="planet-description">Twice as massive as the other planets combined.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                3.13
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                24.79
+            </div>
+            <div class="detail" data-detail="hours">
+                9.9
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/5_jupiter.jpg" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="saturn">
+        <div class="planet-title">
+            <h2>Saturn</h2>
+            <p class="planet-description">This planet sponsored by Zales.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                26.73
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                10.44
+            </div>
+            <div class="detail" data-detail="hours">
+                10.7
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/6_saturn.jpg" />
+        </figure>
+    </div>
+
+    <div class="planet" data-planet="uranus">
+        <div class="planet-title">
+            <h2>Uranus</h2>
+            <p class="planet-description">Hey, stop laughing. It's not funny.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                97.77
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                8.69
+            </div>
+            <div class="detail" data-detail="hours">
+                17.2
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/7_uranus.jpg" />
+        </figure>
+    </div>
+
+
+    <div class="planet" data-planet="neptune">
+        <div class="planet-title">
+            <h2>Neptune</h2>
+            <p class="planet-description">A planet for pirates; just narrowly made the cut when scientists decided nine planets was too many.</p>
+        </div>
+
+        <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="°">
+                28.32
+            </div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">
+                11.15
+            </div>
+            <div class="detail" data-detail="hours">
+                16.1
+            </div>
+        </div>
+
+        <figure class="planet-figure">
+            <img src="../media/planet/8_neptune.jpg" />
+        </figure>
+    </div>
+</div>
+
+<script src="../script/library-planets.js"></script>
+<script  src="../script/selection-planet.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+:root {
+    --black: #000000;
+    --lgtgrey: #8e8e8e;
+    --text: #fff;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Custom scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #232323;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #707070;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em 2em;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+#left-logo-container .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text);
+}
+
+#link-nav-container {
+    display: flex;
+}
+
+#link-nav-container a {
+    margin: 0 1em;
+    font-size: 1em;
+    position: relative;
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+#link-nav-container a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text);
+    transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+#link-nav-container a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+
+#account-container {
+    display: flex;
+    align-items: center;
+}
+
+#account-container svg {
+    display: flex;
+    align-content: center;
+}
+
+
+#viewport-hero {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 2em 1em 2em;
+    height: 100vh;
+    min-height: 30em;
+    background-color: rgba(34, 34, 34, 0.7);
+    position: relative;
+}
+
+#viewport-hero::before {
+    content: "";
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: 0.2s;
+}
+
+#viewport-hero .text {
+    max-width: 700px;
+    color: var(--text);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+#viewport-hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+#viewport-hero p {
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.btn {
+    font-size: 1.1em;
+    display: inline-block;
+    text-decoration: none;
+    margin: 2em 1em;
+    padding: 0.8em 1.5em;
+    border-radius: 3em;
+    background: transparent;
+    color: var(--text);
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--text);
+    color: var(--black);
+}
+
+
+@media screen and (min-width: 900px) {
+    .container > .brand {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #viewport-hero h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #link-nav-container {
+        display: none;
+    }
+
+    #burger-menu-icon {
+        color: var(--text);
+        display: block;
+    }
+
+    .burger-menu.open {
+        display: block;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}

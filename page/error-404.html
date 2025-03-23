@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta name="author" content="Tonon-Jacopo">
+    <meta name="robots" content="all">
+    <meta name="robots" content="index, follow, noarchive">
+    <meta name="google-site-verification" content="">
+    <meta name="description" content="A journey into the unknown. Join us for a space journey that will change your life!">
+
+    <link rel="icon" href="../media/wormhole-logo.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/error-404.css" />
+    <link rel="stylesheet" href="../css/font-all.css" />
+
+    <title>404 | Space Travel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+        attribute float size;
+        attribute vec3 customColor;
+        varying vec3 vColor;
+
+        void main() {
+
+          vColor = customColor;
+          vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+          gl_PointSize = size * ( 300.0 / -mvPosition.z );
+          gl_Position = projectionMatrix * mvPosition;
+
+        }
+
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+        uniform vec3 color;
+        uniform sampler2D pointTexture;
+
+        varying vec3 vColor;
+
+        void main() {
+
+          gl_FragColor = vec4( color * vColor, 1.0 );
+          gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+        }
+    </script>
+</head>
+<body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="magic"></div>
+    <div class="playground">
+        <div id="ctn-btn">
+            <a href="../index.html" class="btn">Return to Earth</a>
+        </div>
+    </div>
+
+
+    <script src="../script/error-404.js"></script>
+
+</body>
+</html>
